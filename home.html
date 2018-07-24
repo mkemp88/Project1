@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Playfair+Display" rel="stylesheet">
+
+    <title>City Search</title>
+  </head>
+  <body id="parallax">
+  <div id="header" class="container">
+   <h1 class="lead">city search</h1>
+   <form id="searchFormHome" class="col-3 border-secondary justify-content-center">
+        <div class="form-group">
+          <input type="search" class="form-control" id="search" aria-describedby="emailHelp" placeholder="Search a City">
+        </div>
+    </form>
+   </div>
+
+   <div id="weatherContainer" class="container">
+    <div class="row">
+    <div id="weather">
+        <div  id="day1">
+         <h4 id="dayTitle1" class="lead">Monday</h4>
+          <div id="weatherCard1">
+             <img id="weatherIcon1" src="./assets/images/cloudy.png">
+          </div>
+          <div id="temp" class="lead">71º</div>
+        </div>
+        <div id="day2">
+         <h4 id="dayTitle2" class="lead">Tuesday</h4>
+          <div id="weatherCard2">
+             <img id="weatherIcon2" src="./assets/images/partlyCloudyRain.png">
+
+          </div>
+          <div id="temp" class="lead">71º</div>
+        </div>
+        <div id="day3">
+         <h4 id="dayTitle3" class="lead">Wednesday</h4>
+          <div id="weatherCard3">
+             <img id="weatherIcon3" src="./assets/images/sunny.png">
+             
+
+          </div>
+          <div id="temp" class="lead">71º</div>
+        </div>
+        <div id="day4">
+         <h4 id="dayTitle4" class="lead">Thursday</h4>
+          <div id="weatherCard4">
+             <img id="weatherIcon4" src="./assets/images/partlyCloudy.png">
+
+
+          </div>
+          <div id="temp" class="lead">71º</div>
+        </div>
+        <div id="day5">
+         <h4 id="dayTitle5" class="lead">Friday</h4>
+          <div id="weatherCard5">
+             <img id="weatherIcon5" src="./assets/images/thunderstorms.png">
+
+
+          </div>
+          <div id="temp" class="lead">71º</div>
+        </div>
+
+    </div>
+   </div>
+   </div>
+   
+   
+   <!--The div element for the map -->
+   <div id="mainContent" class="container">
+
+   <div id="map">
+
+   </div>
+   
+    
+   <div id="tableButtons" class="row align-content-center">
+    <div class="col-3">
+    <button id="sites" class="btn-block btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Sites
+    </button>
+    </div>
+    <div class="col-3">
+    <button id="restaurants" class="btn-block btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+        Restaurants
+    </button>
+    </div>
+    <div class="col-3">
+    <button id="bars" class="btn-block btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+        Bars
+    </button>
+    </div>
+  </div>
+    <div class="collapse" id="collapseExample">
+            <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+    </div>
+    <div class="collapse" id="collapseExample2">
+            <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+    </div>
+    <div class="collapse" id="collapseExample3">
+            <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+    </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="../Project1/app.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsTnZnqTGJbIJrtJU93G9pcbBev17WuiE&callback=initMap"></script>
+    
+  </body>
+</html>
