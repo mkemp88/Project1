@@ -7,7 +7,9 @@ $(document).ready(function () {
     $("#searchButtonHome").on("click", function (event) {
         // Avoid Reloading The Page
         event.preventDefault();
-
+        $("#sitesBody").html("")
+        $("#restBody").html("")
+        $("#barsBody").html("")
         var city = $("#searchFormHome").val();
         console.log(city);
 
@@ -55,8 +57,8 @@ $(document).ready(function () {
             console.log(long);
             check();
             $("#loadingScreen").hide();
-            window.location = "./home.html"
-
+            // window.location = "./home.html"
+            map()
         }, function(error) {
             console.log("no");
         });
@@ -66,7 +68,44 @@ $(document).ready(function () {
             console.log(long);
             initMap(lat, long);
         }
-
+            var ApiKey = "r3Hc8BnsUFDpVkNXlAdnQHhSY3WZWfGx";
+            // var city = $(".form-control").val();
+            console.log(city);
+            function map() {
+            var QueryUrl2 = "https://www.mapquestapi.com/search/v2/radius?origin=" + city + "&radius=20&maxMatches=10&ambiguities=ignore&hostedData=mqap.ntpois|group_sic_code=?|999333&outFormat=json&key=" + ApiKey;
+            $.ajax({
+                url: QueryUrl2,
+                method: 'GET'
+            }).then(function (response) {
+                console.log(response);
+                for (var i = 0; i <= 10; i++) {
+                    // response.searchResults[i]
+                    $("#sitesBody").append("<tr><td>" + response.searchResults[i].name + "</td></tr>");
+                }
+            })
+            var QueryUrl1 = "https://www.mapquestapi.com/search/v2/radius?origin=" + city + "&radius=5&maxMatches=10&ambiguities=ignore&hostedData=mqap.ntpois|group_sic_code=?|581208&outFormat=json&key=" + ApiKey;
+            $.ajax({
+                url: QueryUrl1,
+                method: 'GET'
+            }).then(function (response) {
+                console.log(response);
+                for (var i = 0; i <= 10; i++) {
+                    // response.searchResults[i]
+                    $("#restBody").append("<tr><td>" + response.searchResults[i].name + "</td></tr>");
+                }
+            })
+            var QueryUrl3 = "https://www.mapquestapi.com/search/v2/radius?origin=" + city + "&radius=5&maxMatches=10&ambiguities=ignore&hostedData=mqap.ntpois|group_sic_code=?|581301&outFormat=json&key=" + ApiKey;
+            $.ajax({
+                url: QueryUrl3,
+                method: 'GET'
+            }).then(function (response) {
+                console.log(response);
+                for (var i = 0; i <= 10; i++) {
+                    // response.searchResults[i]
+                    $("#barsBody").append("<tr><td>" + response.searchResults[i].name + "</td></tr>");
+                }
+            })
+        }});
         // Map
         function initMap() {  
             $("#mainContent").show();    
@@ -79,4 +118,4 @@ $(document).ready(function () {
             var marker = new google.maps.Marker({ position: uluru, map: map });
         }
     });
-}); // Document Ready
+     // Document Ready
