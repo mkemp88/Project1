@@ -15,13 +15,23 @@
   <body id="background">
    <div class="container">
     <div class="row-12">
-      <form id="searchForm" class="col-4 border-secondary">
-          <div class="form-group">
-            <input type="search" class="form-control" id="search" aria-describedby="emailHelp" placeholder="Search a City">
+      <form id="searchForm" class="col-4" action="./home.html">
+        <div class="input-group mb-3">
+            <input id="search" type="text" class="form-control" placeholder="Search a City" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <a href="./home.html"><button id="searchButton" formaction="./home.html" class="btn" type="button"></button></a>
+            </div>
           </div>
       </form>
     </div>
    </div>
+   <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          Sorry the name you have entered does not appear to be a city.
+        </div>
+      </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

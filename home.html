@@ -14,12 +14,16 @@
   </head>
   <body id="parallax">
   <div id="header" class="container">
-   <h1 class="lead">city search</h1>
-   <form id="searchFormHome" class="col-3 border-secondary justify-content-center">
-        <div class="form-group">
-          <input type="search" class="form-control" id="search" aria-describedby="emailHelp" placeholder="Search a City">
+    <div class="col-sm-12 col-md-6">
+   <h1 id="titleHome" class="lead">city search</h1></div>
+   <form id="searchFormHome" class="col-sm-12 col-md-3" action="./home.html">
+    <div class="input-group mb-3">
+        <input id="searchFormHome" type="text" class="form-control" placeholder="Search a City" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <a href="./home.html"><button id="searchButtonHome" formaction="./home.html" class="btn" type="button"></button></a>
         </div>
-    </form>
+      </div>
+   </form>
    </div>
 
    <div id="weatherContainer" class="container">
@@ -202,6 +206,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     <script src="../Project1/app.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsTnZnqTGJbIJrtJU93G9pcbBev17WuiE&callback=initMap"></script>
-    
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+
   </body>
 </html>
