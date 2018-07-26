@@ -17,7 +17,8 @@
    <h1 class="lead">city search</h1>
    <form id="searchFormHome" class="col-3 border-secondary justify-content-center">
         <div class="form-group">
-          <input type="search" class="form-control" id="search" aria-describedby="emailHelp" placeholder="Search a City">
+          <input type="text" class="form-control" id="search" aria-describedby="emailHelp" placeholder="Search a City">
+          <input type="submit" id="submit" placeholder="Submit">
         </div>
     </form>
    </div>
@@ -30,7 +31,7 @@
           <div id="weatherCard1">
              <img id="weatherIcon1" src="./assets/images/cloudy.png">
           </div>
-          <div id="temp" class="lead">71º</div>
+          <div id="temp1" class="lead">71º</div>
         </div>
         <div id="day2">
          <h4 id="dayTitle2" class="lead">Tuesday</h4>
@@ -38,7 +39,7 @@
              <img id="weatherIcon2" src="./assets/images/partlyCloudyRain.png">
 
           </div>
-          <div id="temp" class="lead">71º</div>
+          <div id="temp2" class="lead">71º</div>
         </div>
         <div id="day3">
          <h4 id="dayTitle3" class="lead">Wednesday</h4>
@@ -47,7 +48,7 @@
              
 
           </div>
-          <div id="temp" class="lead">71º</div>
+          <div id="temp3" class="lead">71º</div>
         </div>
         <div id="day4">
          <h4 id="dayTitle4" class="lead">Thursday</h4>
@@ -56,7 +57,7 @@
 
 
           </div>
-          <div id="temp" class="lead">71º</div>
+          <div id="temp4" class="lead">71º</div>
         </div>
         <div id="day5">
          <h4 id="dayTitle5" class="lead">Friday</h4>
@@ -65,7 +66,7 @@
 
 
           </div>
-          <div id="temp" class="lead">71º</div>
+          <div id="temp5" class="lead">71º</div>
         </div>
 
     </div>
@@ -100,7 +101,7 @@
   </div>
     <div class="collapse" id="collapseExample">
             <table class="table">
-                    <thead>
+                    <thead id="test">
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">First</th>
@@ -197,10 +198,14 @@
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-    <script src="../Project1/app.js"></script>
+    <script src="app.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsTnZnqTGJbIJrtJU93G9pcbBev17WuiE&callback=initMap"></script>
     
   </body>
