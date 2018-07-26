@@ -4,11 +4,11 @@ $(document).ready(function () {
     var lat;
     var long;
 
-    $("#submit").on("click", function (event) {
+    $("#searchButtonHome").on("click", function (event) {
         // Avoid Reloading The Page
         event.preventDefault();
 
-        var city = $("#search").val();
+        var city = $("#searchFormHome").val();
         console.log(city);
 
         var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + '&appid=' + APIKey + "&units=" + Units;
@@ -54,6 +54,8 @@ $(document).ready(function () {
             console.log(lat);
             console.log(long);
             check();
+            $("#loadingScreen").hide();
+            window.location = "./home.html"
 
         }, function(error) {
             console.log("no");
@@ -72,7 +74,7 @@ $(document).ready(function () {
             var uluru = { lat: lat, lng: long};
             // The map, centered at Uluru
             var map = new google.maps.Map(
-                document.getElementById('map'), { zoom: 4, center: uluru });
+                document.getElementById('map'), { zoom: 8, center: uluru });
             // The marker, positioned at Uluru
             var marker = new google.maps.Marker({ position: uluru, map: map });
         }
